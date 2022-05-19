@@ -10,13 +10,16 @@
         var.set("zf", std::to_string(utils::random(INT_MIN, INT_MAX)));
         var.set("hash", std::to_string(utils::random(INT_MIN, INT_MAX)));
         var.set("hash2", std::to_string(hash2));
-        var.set("meta", "");
+        var.set("meta", "TLddQ2jYAo");
         var.set("game_version", gt::version);
         var.set("country", gt::flag);
-        var.find("platformID")->m_values[0] = "4"; 
+        if (var.find("tankIDName")) {
+        name = var.find("tankIDName")->m_values[0];
+            }
+        var.find("platformID")->m_values[0] = "4"; //Android for now doesn't have puzzle captcha
         var.remove("fz");
         var.remove("rid");
-         }
+
 
         packet = var.serialize();
         gt::in_game = false;
