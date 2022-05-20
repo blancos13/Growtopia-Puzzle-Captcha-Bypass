@@ -18,8 +18,6 @@
         var.find("platformID")->m_values[0] = "4"; //Android for now doesn't have puzzle captcha
         var.remove("fz");
         var.remove("rid");
-
-
         packet = var.serialize();
         gt::in_game = false;
         PRINTS("Spoofing login info\n");
