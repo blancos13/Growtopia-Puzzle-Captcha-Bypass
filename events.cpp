@@ -15,7 +15,6 @@
         var.set("country", gt::flag);
         if (var.find("tankIDName")) {
         name = var.find("tankIDName")->m_values[0];
-            }
         var.find("platformID")->m_values[0] = "4"; //Android for now doesn't have puzzle captcha
         var.remove("fz");
         var.remove("rid");
